@@ -10,13 +10,12 @@
     let provas = Number(prompt(`Quantas provas o aluno fez?`))
     let soma = 0
     let media = 0
-    let notaAluno = 0
     
     
     //PROCESSAMENTO
-    for(let notas = []; notas.length <= provas; notaAluno = Number(prompt(`Qual a nota que o aluno tirou na prova?`).replace(",", ".")) ) {
-        notas.push(notaAluno)
-        soma += notas
+    for(let notas = 1; notas <= provas;  notas++) {
+        let notaAluno = Number(prompt(`Qual a nota que o aluno tirou na prova?`).replace(",", "."))
+        soma += notaAluno
     }
     media =  soma / provas
     
