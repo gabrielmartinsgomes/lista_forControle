@@ -8,9 +8,48 @@
     */
 
     //ENTRADA
+    let regentes = [];
+    let votos = [];
+    let votos1 = 0;
+    let votos2 = 0;
+    let votos3 = 0;
+    for(let i = 1; i <= 3; i++){
+       let nomes = prompt(`Qual o nome dos regentes a serem eleitos?`);
+       regentes.push(nomes)
+
+    }
+    let quantAlunos = Number(prompt(`Qual a quantidade de alunos que votaram?`));
+    for(let votosAlunos = 1; votosAlunos <= quantAlunos; votosAlunos++){
+        let votoReitor = Number(prompt(`Qual foi o voto para reitor? 1 para ${regentes[0]}; 2 para ${regentes[1]}; 3 para ${regentes[2]}`))
+        votos.push(votoReitor);
+        
+    }
+    for(let contagem = 0; contagem< quantAlunos; contagem++)
+    if(votos.includes(1) == true){
+            votos1 ++
+            
+        }
+    else if(votos.includes(2) ==true){
+            votos2 ++
+            
+        }
+    else if(votos.includes(3) == true){
+            votos3 ++
+            
+        }
+    if(votos1 > votos2 && votos1 > votos3){
+        alert(`O ganhador foi ${regentes[0]} com ${votos1} votos, que resultou em ${votos1/(votos1+votos2+votos3)*100}% dos votos`);
+    }
+    else if(votos2 > votos1 && votos2 > votos3){
+        alert(`O ganhador foi ${regentes[1]} com ${votos2} votos, que resultou em ${votos2/(votos1+votos2+votos3)*100}% dos votos`);
+    }
+    else if(votos3 > votos1 && votos3 > votos2){
+        alert(`O ganhador foi ${regentes[2]} com ${votos2} votos, que resultou em ${votos3/(votos1+votos2+votos3)*100}% dos votos`);
+    }
 
 
     //PROCESSAMENTO
+    
 
 
     //SAÍDA

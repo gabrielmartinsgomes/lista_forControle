@@ -6,11 +6,25 @@
     */
 
     //ENTRADA
+    let numInicial = Number(prompt(`Informe um número inicial`));
+    let numFinal = Number(prompt(`Informe um número final`));
+    let numImpar2 = []
 
-    
+
     //PROCESSAMENTO
+    for (let numImpar = numFinal - (numFinal - numInicial); numImpar <= numFinal; numImpar++) {
+        if (numInicial < numFinal) {
+            if (numImpar % 2 != 0) {
+                numImpar2.push(numImpar)
+            }
+        }
+        else if (numInicial >= numFinal) {
+            alert(`ERRO! O número inicial precisa ser menor que o número final`)
+        }
+    }
 
-    
+
     //SAÍDA
+    alert(numImpar2)
 
 </script>

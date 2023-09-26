@@ -6,11 +6,22 @@
     */
 
     //ENTRADA
+    let habitantes = 50000
+    let habitantes2 = 50000
+    let anos5 = 0;
+    let anos10 = 0;
 
     
     //PROCESSAMENTO
+    for(let anos = 1; anos <= 5; anos ++){
+       anos5 += habitantes*1.015
+    }
+    for(let anos = 1; anos <= 10; anos ++){
+       anos10+= habitantes2*1.015
+    }
     
 
     //SAÍDA
+    alert(`Daqui a 5 anos: ${Math.round(anos5)} \n Daqui a 10 anos: ${Math.round(anos10)}`)
 
 </script>

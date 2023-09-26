@@ -10,17 +10,17 @@
     let num1 = [];
     let maiorNum = 0;
 
-    
+
     //PROCESSAMENTO
-    for( let num2 = 1; num2 <= 5; num2 ++ ) {
+    for (let num2 = 1; num2 <= 5; num2++) {
         let num3 = Number(prompt(`Informe um número`).replace(",", "."));
         num1.push(num3)
-        num1.sort((a, b) => a-b)
+        num1.sort((a, b) => a - b)
         maiorNum = num1[num1.length - 1]
     }
 
 
-    
+
     //SAÍDA
     alert(maiorNum)
 
