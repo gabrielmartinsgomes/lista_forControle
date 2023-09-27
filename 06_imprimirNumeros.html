@@ -8,7 +8,8 @@
     //ENTRADA
     let numInicial = Number(prompt(`Informe um número inicial`));
     let numFinal = Number(prompt(`Informe um número final`));
-    let numImpar2 = []
+    let numImpar2 = [];
+    let numPar = [];
 
 
     //PROCESSAMENTO
@@ -17,14 +18,22 @@
             if (numImpar % 2 != 0) {
                 numImpar2.push(numImpar)
             }
-        }
-        else if (numInicial >= numFinal) {
-            alert(`ERRO! O número inicial precisa ser menor que o número final`)
+            else if(numImpar%2 == 0){
+                numPar.push(numImpar);
+            }
+            
         }
     }
+    if(numInicial < numFinal){
+        alert(`Numeros Impares: ${numImpar2} \n Numeros Pares: ${numPar}`);
+    }
+    else if (numInicial >= numFinal) {
+            alert(`ERRO! O número inicial precisa ser menor que o número final`)
+        }
+    
 
 
     //SAÍDA
-    alert(numImpar2)
+    
 
 </script>
